@@ -1,0 +1,17 @@
+{
+  "name": "tipbot",
+  "version": "0.3.2",
+  "module": "./src/index.ts",
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "deploy": "bash ./scripts/deploy.sh",
+    "build": "echo \"perhaps for / cmd deployment?\"",
+    "start": "bun run ./src/index.ts"
+  },
+  "type": "module"
+}
