@@ -2,16 +2,22 @@
   "name": "tipbot",
   "version": "0.3.2",
   "module": "./src/index.ts",
+  "scripts": {
+    "deploy": "bash ./scripts/deploy.sh",
+    "build": "echo \"perhaps for / cmd deployment?\"",
+    "dev": "bun run --hot ./src/index.ts",
+    "start": "bun run ./src/index.ts",
+    "dstop": "docker stop $(docker ps -a -q) && docker system prune -a"
+  },
+  "type": "module",
   "devDependencies": {
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
-  "scripts": {
-    "deploy": "bash ./scripts/deploy.sh",
-    "build": "echo \"perhaps for / cmd deployment?\"",
-    "start": "bun run ./src/index.ts"
-  },
-  "type": "module"
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "dotenv": "^16.4.5"
+  }
 }
