@@ -15,7 +15,7 @@ const client = new Client({
   partials: [Partials.Channel, Partials.Message]
 });
 
-const prefix = process.env.prefix;
+const prefix = process.env.PREFIX;
 
 client.once("ready", () => {
   console.log(`logged in as ${client.user?.username}!`);
