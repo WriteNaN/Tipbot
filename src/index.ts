@@ -1,5 +1,5 @@
 import { Client, GatewayIntentBits, Partials } from "discord.js";
-import { people } from "./emoji";
+import path from "path";
 
 import "dotenv/config";
 
@@ -23,8 +23,14 @@ client.once("ready", () => {
 
 client.on("messageCreate", async (message): Promise<any> => {
   if (message.content.startsWith(prefix) || message.content.split(" ")[0] == `<@${client.user?.id}>`) {
-    message.react(people.slight_smile);
-    return message.reply("hi!");
+    const parsedCMD = message.content.startsWith(prefix) ? message.content.slice(1).split(" ") : message.content.split(" ").splice(1);
+    try {
+      const commandFile = path.join(__dirname, "commands", "message", `${parsedCMD[0].toLowerCase()}.ts`);
+      const { default: execute } = await import(commandFile);
+      return execute(client, message, parsedCMD);
+    } catch {
+      return;
+    }
   } else {
     return;
   }

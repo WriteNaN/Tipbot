@@ -11,13 +11,16 @@
   },
   "type": "module",
   "devDependencies": {
+    "@types/async-lock": "^1.4.2",
     "@types/bun": "latest"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "async-lock": "^1.4.1",
     "discord.js": "^14.14.1",
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "multi-nano-web": "^1.5.1"
   }
 }
