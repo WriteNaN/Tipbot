@@ -83,17 +83,11 @@ function depositEmbed(message: Message, address: string, network: string) {
     text: `requested by ${message.author.username}`,
   });
   embed.setTimestamp();
-  try {
     if (message.channel.type !== ChannelType.DM) {
       embed.setURL(message.url);
-      message.author.send({ embeds: [embed] });
+      message.author.send({ embeds: [embed] }).catch(() => message.reply("failed to send, perhaps you have your dms off?"));
       return message.reply("sent deposit address in dm!");
     } else {
       return message.reply({ embeds: [embed] });
     }
-  } catch {
-    return message.reply(
-      "error sending deposit address. do you have your dms turned on?"
-    );
-  }
 }
