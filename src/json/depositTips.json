@@ -2,5 +2,10 @@
     "nano": "Zero fee, Instant finality. Sub-second confirmation. \n\n Balance is credited as soon as it is verified on the network.",
     "dogenano": "Zero fee, Instant finality. Sub-second confirmation. \n\n Balance is credited as soon as it is verified on the network.",
     "raiblocksone": "Zero fee, Instant finality. Sub-second confirmation. \n\n Balance is credited as soon as it is verified on the network.",
-    "banano": "Zero fee, Instant finality. Sub-second confirmation. \n\n Balance is credited as soon as it is verified on the network."
+    "banano": "Zero fee, Instant finality. Sub-second confirmation. \n\n Balance is credited as soon as it is verified on the network.",
+
+
+    "instructions": {
+        "withdraw": "Withdrawal is instantly broadcasted to the blockchain after requesting one. You will be prompted to accept it with info such as calculated fees. please fill the form by clicking on the withdraw button below!"
+    }
 }
