@@ -1,5 +1,5 @@
 import { Client, GatewayIntentBits, Partials } from "discord.js";
-import { updateStatusInterval } from "./presence";
+//import { updateStatusInterval } from "./presence";
 import path from "path";
 
 import "dotenv/config";
@@ -20,10 +20,11 @@ const prefix = process.env.PREFIX;
 
 client.once("ready", () => {
   console.log(`logged in as ${client.user?.username}!`);
-  updateStatusInterval(client);
+  //updateStatusInterval(client);
 });
 
 client.on("messageCreate", async (message): Promise<any> => {
+  if (message.author.bot) return;
   if (
     message.content.startsWith(prefix) ||
     message.content.split(" ")[0] == `<@${client.user?.id}>`
@@ -40,7 +41,8 @@ client.on("messageCreate", async (message): Promise<any> => {
       );
       const { default: execute } = await import(commandFile);
       return execute(client, message, parsedCMD);
-    } catch {
+    } catch (e) {
+      console.log(e);
       return;
     }
   } else {

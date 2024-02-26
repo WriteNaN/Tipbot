@@ -15,22 +15,25 @@ function generateNanoWallets(): NanoWallet[] {
   const privateKey = walletX.accounts[0].privateKey;
 
   return [
-    { privateKey, publicKey, address: nanoAddress, network: "xno" },
+    { privateKey, publicKey, address: nanoAddress, network: "xno", alias: "nano" },
     {
       privateKey,
       publicKey,
+      alias: "banano",
       address: nanoAddress.replace("nano", "ban"),
       network: "ban",
     },
     {
       privateKey,
       publicKey,
+      alias: "dogenano",
       address: nanoAddress.replace("nano", "xdg"),
       network: "xdg",
     },
     {
       privateKey,
       publicKey,
+      alias: "raiblocksone",
       address: nanoAddress.replace("nano", "xro"),
       network: "xro",
     },
