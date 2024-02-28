@@ -23,6 +23,27 @@ client.once("ready", () => {
   //updateStatusInterval(client);
 });
 
+client.on("interactionCreate", async (interaction): Promise<any> => {
+  if (interaction.isButton()) {
+    try {
+    const commandFile = path.join(
+      __dirname,
+      "commands",
+      "buttons",
+      `${interaction.customId}.ts`
+    );
+    const { default: execute } = await import(commandFile);
+    return execute(client, interaction.customId, interaction);
+    } catch (e) {
+      console.error(e);
+      return interaction.reply({
+        content: "error executing command, please try again or file an issue [here](https://github.com/WriteNaN/Tipbot/)",
+        ephemeral: true
+      });
+    }
+  }
+});
+
 client.on("messageCreate", async (message): Promise<any> => {
   if (message.author.bot) return;
   if (
