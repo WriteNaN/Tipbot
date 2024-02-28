@@ -10,6 +10,7 @@ import {
 
 import logo from "../../json/logo.json";
 import depositTips from "../../json/depositTips.json";
+import { objects } from "../../emoji";
 
 import { getUser } from "../../utils/db";
 
@@ -21,9 +22,9 @@ export default async function execute(
   if (message.channel.type !== ChannelType.DM)
     return message.reply("use this command in dm to withdraw.");
 
-  if (!args[1])
+  if (args[1])
     return message.reply(
-      "please specify the token to withdraw. eg: !withdraw xno"
+      "withdrawal of all supported currencies is unified, please proceed with no arguments."
     );
 
   const user = getUser(parseInt(message.author.id));
@@ -34,23 +35,20 @@ export default async function execute(
     );
 
   try {
-    const walletByNetwork = user.wallets.find(
-      (crypto) => crypto.network == args[1].toLowerCase()
-    );
-    const walletByAlias = user.wallets.find(
-      (crypto) => crypto.alias == args[1].toLowerCase()
-    );
-    const network = walletByNetwork?.alias || walletByAlias?.alias;
     const btn = new ButtonBuilder()
       .setCustomId("withdrawal")
       .setLabel(`Withdraw`)
-      .setStyle(ButtonStyle.Primary)
-      .setEmoji(logo[network]);
+      .setStyle(ButtonStyle.Success)
+      .setEmoji(objects.money_with_wings);
 
     const embed = new EmbedBuilder();
-    embed.setTitle(`Withdraw ${network.charAt(0).toUpperCase()+network.slice(1)}`);
+    embed.setTitle(
+      `Withdraw Tokens`
+    );
     embed.setDescription(depositTips.instructions.withdraw);
     embed.setTimestamp();
+    embed.setThumbnail("https://33.media.tumblr.com/e04f8aa335be5eeab0a0dfd317f04f7c/tumblr_nig1owKqZA1sjegsuo1_500.gif");
+    embed.setColor('Green');
 
     const row = new ActionRowBuilder().addComponents(btn);
 
@@ -66,4 +64,4 @@ export default async function execute(
       "an error occured while trying to send the withdrawal form"
     );
   }
-};
+}
