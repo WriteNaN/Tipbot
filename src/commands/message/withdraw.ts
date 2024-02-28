@@ -8,7 +8,6 @@ import {
   ActionRowBuilder,
 } from "discord.js";
 
-import logo from "../../json/logo.json";
 import depositTips from "../../json/depositTips.json";
 import { objects } from "../../emoji";
 
@@ -41,6 +40,12 @@ export default async function execute(
       .setStyle(ButtonStyle.Success)
       .setEmoji(objects.money_with_wings);
 
+      const btn2 = new ButtonBuilder()
+      .setCustomId("cancel")
+      .setLabel(`Cancel`)
+      .setStyle(ButtonStyle.Danger)
+      .setEmoji(objects.wastebasket);
+
     const embed = new EmbedBuilder();
     embed.setTitle(
       `Withdraw Tokens`
@@ -50,7 +55,7 @@ export default async function execute(
     embed.setThumbnail("https://33.media.tumblr.com/e04f8aa335be5eeab0a0dfd317f04f7c/tumblr_nig1owKqZA1sjegsuo1_500.gif");
     embed.setColor('Green');
 
-    const row = new ActionRowBuilder().addComponents(btn);
+    const row = new ActionRowBuilder().addComponents(btn, btn2);
 
     return message.reply({
       embeds: [embed],
