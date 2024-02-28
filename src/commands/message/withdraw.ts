@@ -66,4 +66,4 @@ export default async function execute(
       "an error occured while trying to send the withdrawal form"
     );
   }
-}
+};

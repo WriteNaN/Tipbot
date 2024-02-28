@@ -6,6 +6,6 @@
 
 
     "instructions": {
-        "withdraw": "Withdrawal is instantly broadcasted to the blockchain after requesting one. You will be prompted to accept it with info such as calculated fees. please fill the form by clicking on the withdraw button below!"
+        "withdraw": "Withdrawal is instantly broadcasted to the blockchain after requesting one. You will be prompted to accept it with info such as calculated fees. please fill the form by clicking on the withdraw button below to initiate the request!"
     }
 }
