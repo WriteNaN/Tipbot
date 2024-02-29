@@ -41,6 +41,19 @@ client.on("interactionCreate", async (interaction): Promise<any> => {
         ephemeral: true
       });
     }
+  } else if (interaction.isModalSubmit()) {
+    try {
+    const commandFile = path.join(
+        __dirname,
+        "commands",
+        "buttons",
+        `${interaction.customId}.ts`
+      );
+      const { default: execute } = await import(commandFile);
+      return execute(client, interaction);
+    } catch {
+        return interaction.reply({ content: "unknown error while executing command.", ephemeral: true })
+    }
   }
 });
 

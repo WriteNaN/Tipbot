@@ -31,13 +31,16 @@ export default async function withdrawal(
     .setCustomId("address")
     .setLabel("address")
     .setLabel("Recipient Address")
-    .setPlaceholder("nano_3w3bmjh34jw4kke5ztbjza8ky9bjruh4ucrdrjmqp5c8onicnwu91tm8j1ku")
+    .setPlaceholder("...Your Withdrawal Address")
     .setStyle(TextInputStyle.Short);
   const networkX = new ActionRowBuilder().addComponents(network);
   const amountX = new ActionRowBuilder().addComponents(amount);
   const addressX = new ActionRowBuilder().addComponents(address);
-
+  try {
   // @ts-expect-error type
   modal.addComponents(networkX, addressX, amountX);
   return await interaction.showModal(modal);
+  } catch (e) {
+    console.error(e); // debug
+  }
 }
