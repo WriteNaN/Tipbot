@@ -1,5 +1,3 @@
-# https://bun.sh/guides/ecosystem/docker <3
-
 FROM oven/bun:1 as base
 WORKDIR /usr/src/app
 
@@ -15,6 +13,7 @@ RUN cd /temp/prod && bun install --frozen-lockfile --production
 FROM base AS prerelease
 COPY --from=install /temp/dev/node_modules node_modules
 COPY . .
+COPY .env .env
 COPY src .
 
 ENV NODE_ENV=production
@@ -24,10 +23,13 @@ FROM base AS release
 COPY --from=install /temp/prod/node_modules node_modules
 COPY --from=prerelease /usr/src/app/src .
 COPY --from=prerelease /usr/src/app/package.json .
+COPY --from=prerelease /usr/src/app/.env .env
+
+RUN mkdir -p /usr/src/app/db && chown bun:bun /usr/src/app/db
 
 WORKDIR /usr/src/app
 
 USER bun
 EXPOSE 3000/tcp
 
-CMD [ "bun", "run", "index.ts" ]
+CMD ["bun", "run", "index.ts"]

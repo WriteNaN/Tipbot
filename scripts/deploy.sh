@@ -15,4 +15,4 @@ echo "please make sure you know what you're about to do. you can choose N if you
 docker system prune -a
 docker build --pull -t tipbot .
 
-docker run -d -p 3000:3000 tipbot
+docker run -p 3000:3000 tipbot
