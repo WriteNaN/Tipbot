@@ -1,5 +1,5 @@
 ### Discord Crypto Tipbot
-If you wish to add more currencies please let me know which on my [twitter!](https://twitter.com/write_int) <3
+*If you wish to add more currencies please let me know which on my [twitter!](https://twitter.com/write_int) <3*
 <details>
   <summary><b>View Supported Currencies</b></summary>
   <br>
