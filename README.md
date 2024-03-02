@@ -9,9 +9,9 @@
         <summary><a href="https://github.com/nanocurrency/nano-node"><img src="https://cdn.worldvectorlogo.com/logos/nano-1.svg" alt="Nano Protocol Icon" height="16"> Nano Protocol</a></summary>
         <ul>
           <li><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1567.png" alt="Nano (XNO) Icon" height="16"> <a href="https://nano.org">Nano (XNO)</a></li>
-          <li><img src="https://banano.cc/favicon.ico" alt="Banano (BAN) Icon" height="16"> <a href="https://banano.cc">Banano (BAN)</a></li>
-          <li><img src="https://dogenano.io/favicon.ico" alt="Dogenano (XDG) Icon" height="16"> <a href="https://dogenano.io">Dogenano (XDG)</a></li>
-          <li><img src="https://raione.cc/favicon.ico" height="16" alt="RaiBlocksOne (XRO) Icon"> <a href="https://raione.cc">RaiBlocksOne (XRO)</a></li>
+          <li><img src="https://banano.cc/favicon.ico" alt="Banano (BAN) Icon" height="16"> <a href="https://banano.cc">Banano (BAN)</a> - FORK</li>
+          <li><img src="https://dogenano.io/favicon.ico" alt="Dogenano (XDG) Icon" height="16"> <a href="https://dogenano.io">Dogenano (XDG)</a> - FORK</li>
+          <li><img src="https://raione.cc/favicon.ico" height="16" alt="RaiBlocksOne (XRO) Icon"> <a href="https://raione.cc">RaiBlocksOne (XRO)</a> - FORK</li>
         </ul>
       </details>
     </li>
