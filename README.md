@@ -6,7 +6,7 @@
   <ul>
     <li>
       <details>
-        <summary><img src="https://cdn.worldvectorlogo.com/logos/nano-1.svg" alt="Nano Protocol Icon" height="16"> Nano Protocol</summary>
+        <summary><a href="https://github.com/nanocurrency/nano-node"><img src="https://cdn.worldvectorlogo.com/logos/nano-1.svg" alt="Nano Protocol Icon" height="16"> Nano Protocol</a></summary>
         <ul>
           <li><img src="https://s2.coinmarketcap.com/static/img/coins/64x64/1567.png" alt="Nano (XNO) Icon" height="16"> <a href="https://nano.org">Nano (XNO)</a></li>
           <li><img src="https://banano.cc/favicon.ico" alt="Banano (BAN) Icon" height="16"> <a href="https://banano.cc">Banano (BAN)</a></li>
