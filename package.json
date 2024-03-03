@@ -12,7 +12,9 @@
   "type": "module",
   "devDependencies": {
     "@types/async-lock": "^1.4.2",
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "@types/react": "^18.2.61",
+    "@types/react-dom": "^18.2.19"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -22,6 +24,8 @@
     "discord.js": "^14.14.1",
     "dotenv": "^16.4.5",
     "multi-nano-web": "^1.5.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "reconnecting-websocket": "^4.4.0"
   }
 }
