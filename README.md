@@ -33,12 +33,14 @@
   </h4>
 
   <div>
-    <a href="https://www.typescriptlang.org/" target="_blank"><img src="https://www.svgrepo.com/show/374144/typescript.svg" height="32" /></a>
-    <a href="https://react.dev/" target="_blank"><img src="https://www.svgrepo.com/show/493719/react-javascript-js-framework-facebook.svg" height="32" /></a>
-    <a href="https://bun.sh" target="_blank"><img src="https://bun.sh/favicon.ico" height="32" /></a>
-    <a href="https://www.docker.com/" target="_blank"><img src="https://www.svgrepo.com/show/448221/docker.svg" height="32" /></a>
+    <a href="https://www.typescriptlang.org/" target="_blank"><img src="https://www.svgrepo.com/show/374144/typescript.svg" height="24" /></a>
+    <a href="https://react.dev/" target="_blank"><img src="https://www.svgrepo.com/show/493719/react-javascript-js-framework-facebook.svg" height="24" /></a>
+    <a href="https://bun.sh" target="_blank"><img src="https://bun.sh/favicon.ico" height="24" /></a>
+    <a href="https://www.docker.com/" target="_blank"><img src="https://www.svgrepo.com/show/448221/docker.svg" height="24" /></a>
   </div>
 </div>
+
+
 
 ## Roadmap 🗺️
 It is very dynamic currently, a public roadmap is on the way. perhaps after a stable release.
