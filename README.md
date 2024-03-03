@@ -4,7 +4,7 @@
   <h1>Multicurrency Discord Tipbot</h1>
   
   <p>
-    Sending tips through discord has never been easier and more fun! <3
+    Sending tips through discord has never been easier and fun! <3
   </p>
 
   
