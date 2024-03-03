@@ -25,11 +25,11 @@
 </p>
    
 <h4>
-      <a href="https://github.com/WriteNaN/Tipbot/wiki">Documentation</a>
+    <a href="https://github.com/WriteNaN/Tipbot/issues/new?assignees=&labels=&projects=&template=bug_report.md&title=">Report Bug</a>
   <span> · </span>
-    <a href="https://github.com/WriteNaN/Tipbot/issues/">Report Bug</a>
+  <a href="https://github.com/WriteNaN/Tipbot/wiki">Documentation</a>
   <span> · </span>
-    <a href="https://github.com/WriteNaN/Tipbot/issues/">Request Feature</a>
+    <a href="https://github.com/WriteNaN/Tipbot/issues/new?assignees=&labels=&projects=&template=feature_request.md&title=">Request Feature</a>
   </h4>
 </div>
 
