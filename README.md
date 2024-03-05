@@ -61,7 +61,6 @@ It is very dynamic currently, a public roadmap is on the way. perhaps after a st
         </ul>
       </details>
     </li>
-    <!-- more on the way -->
   </ul>
 </details>
 
