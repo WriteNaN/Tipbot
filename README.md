@@ -44,7 +44,7 @@
 
 
 ## Roadmap 🗺️
-It is very dynamic currently, a public roadmap is on the way. perhaps after a stable release.
+It is very dynamic currently, A public roadmap is on the way. Perhaps after a stable release.
 
 <details>
   <summary><b>View Supported Currencies</b></summary>
