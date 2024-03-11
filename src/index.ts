@@ -3,7 +3,6 @@ import { Client, GatewayIntentBits, Partials } from "discord.js";
 import path from "path";
 
 import "dotenv/config";
-import "./web";
 
 const client = new Client({
   intents: [
